@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router';
 import ReactRouterLibrary, { ReactRouterPage1, ReactRouterPage2 } from './react-router/ReactRouterLibrary';
 import Layout from './react-router/Layout';
 import AxiosLibrary from './axios/AxiosLibrary';
+import ReactCookieLibrary from './react-cookie/ReactCookieLibrary';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       </Route>
         <Route path='/zustand' element={<ZustandLibrary />} />
         <Route path='/axios' element={<AxiosLibrary />} />
-        {/* 올바르지 않은 주소 접속 시 404Error 표시 */}
+        <Route path='/cookie/cookie' element={<ReactCookieLibrary />} />
+        {/* 올바르지 않은 주소 접속 시 404Error 표시 */} 
         <Route path='*' element={<h3>404 Error</h3>} />
       </Routes>
   );
