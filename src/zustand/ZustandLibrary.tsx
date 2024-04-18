@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { create } from 'zustand';
 
 //! zustand 패키지(라이브러리):
@@ -41,7 +42,6 @@ const useStore = create<Store>((set) =>
         increaseZNormal: () => set(state => ({ ...state, zNormal: state.zNormal +1 })),
         // state로 콜백함수 전달, zNormal: 객체(state). 에서 원래상태인 zNormal을 불러옴, decreaseZNormal +1 작업이므로, -1.
         decreaseZNormal: () => set(state => ({ ...state, zNormal: state.zNormal -1 }))
-
     }));
 
 export default function ZustandLibrary() {
@@ -67,7 +67,8 @@ export default function ZustandLibrary() {
 
     return (
         <div>
-            <a href='http://localhost:3000/router'>홈으로</a>
+            {/* <a href='http://localhost:3000/router'>홈으로</a> */}
+            <Link to='/router'>홈으로</Link>
             <div>
                 <h4>useState 방식 : {normal}</h4>
                 <button onClick={decreaseNormal}>-</button>
