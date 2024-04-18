@@ -56,7 +56,7 @@ export default function ReactRouterLibrary() {
     <div>
       ReactRouterLibrary
       {/* <a href="httl://localhost:3000/zustand">Zustand로!</a> */}
-      <Link to='/zustand'>Zustand로!</Link>
+      <Link to='/zustand' onClick={onLinkClick}>Zustand로!</Link>
       <div>
         <h4>{count}</h4>
         <button onClick={onButtonClick}>버튼</button>
