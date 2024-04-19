@@ -9,7 +9,7 @@ import { useCookies } from 'react-cookie';
 // npm i react-cookie
 export default function ReactCookieLibrary() {
 
-    // useCookies 훅 함수로 쿠키 객체, 쿠키 지정 함수, 쿠키 삭제 함수를 배열로 반환 받음
+    //* useCookies 훅 함수로 쿠키 객체, 쿠키 지정 함수, 쿠키 삭제 함수를 배열로 반환 받음
     const [cookies, setCookie, removeCookie] = useCookies();
     const [key, setKey] = useState<string>('');
     const [value, setValue] = useState<string>('');
@@ -30,7 +30,7 @@ export default function ReactCookieLibrary() {
     const onRegisButtonClickHandler = () => {
         const now = new Date();
         now.setSeconds(now.getSeconds() + 10 );
-        //* setCookie 함수는 첫번째 매개변수로 name 값 / 두번째 매개변수로 value값/ 
+        //! setCookie 함수는 첫번째 매개변수로 name 값 / 두번째 매개변수로 value값/ 
         //* 세번째 매개변수로 option 지정
         //! option: 
         //* - path: 쿠키를 사용할 수 있는 경로
@@ -39,7 +39,7 @@ export default function ReactCookieLibrary() {
     }
 
     const onRemoveButtonClickHandler = () => {
-        // removeCookie 함수는 첫번째 매개변수로 name 값 / 두번째 매개변수로 option 지정
+        //! removeCookie 함수는 첫번째 매개변수로 name 값 / 두번째 매개변수로 option 지정
         removeCookie(key, {path:'/'});
     }
 
